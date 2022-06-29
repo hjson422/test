@@ -19,9 +19,8 @@ public class CommentsDTO {
     private String content;
 
 
-    public Comments convertToEntity(Reviews reviews) {
+    public Comments convertToNewEntity(Reviews reviews) {
         Comments comments = Comments.builder()
-                .id(id)
                 .content(content)
                 .nickName(nickName)
                 .reviews(reviews)
