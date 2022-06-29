@@ -11,8 +11,6 @@ import java.util.Optional;
 @Repository
 public interface ReviewRepository extends JpaRepository<Reviews, Long> {
     List<Reviews> findAll();
-
-    Optional<Reviews> findById(Long id);
     List<Reviews> findByTags(String tags);
 
     List<Reviews> findByPlaces(String places);

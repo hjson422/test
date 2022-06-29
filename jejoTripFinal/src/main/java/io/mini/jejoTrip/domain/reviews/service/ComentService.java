@@ -68,7 +68,9 @@ public class ComentService {
 
 //        Comments comments = Comments.ofCreate(request.getContent());
         log.info(commentsDTO);
-        comentRepository.save(commentsDTO.convertToNewEntity(reviews));
+        Comments comments = Comments.of(commentsDTO.getNickName(), commentsDTO.getContent(), reviews);
+
+        comentRepository.save(comments);
     }
 
     private static final int BLOCK_PAGE_NUM_COUNT = 5; // 블럭에 존재하는 페이지 번호 수

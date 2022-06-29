@@ -49,6 +49,14 @@ public class Comments {
                 .nickName(nickName).build();
         }
 
+        public static Comments of(String nickName, String content, Reviews reviews){
+                Comments comments = new Comments();
+                comments.nickName = nickName;
+                comments.content = content;
+                comments.reviews = reviews;
+                return comments;
+        }
+
 
 
 //        public void update(String content){

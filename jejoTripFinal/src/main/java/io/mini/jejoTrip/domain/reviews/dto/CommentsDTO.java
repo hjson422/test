@@ -20,11 +20,10 @@ public class CommentsDTO {
 
 
     public Comments convertToNewEntity(Reviews reviews) {
-        Comments comments = Comments.builder()
+        return Comments.builder()
                 .content(content)
                 .nickName(nickName)
                 .reviews(reviews)
                 .build();
-        return comments;
     }
 }
