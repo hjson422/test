@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입 페이지</title>
+</head>
+<body >
+<h1>회원 가입</h1>
+<hr>
+
+<form th:action="@{/user/signup}" method="post">
+  아이디:
+  <input type="email" name="userName" placeholder="이메일 입력해주세요"><br>
+  비밀번호 :
+  <input type="password" name="passWord" placeholder="비밀번호"><br>
+  이름 :
+  <input type="text" name="realName" placeholder="성함을 입력해주세요"><br>
+  별명 :
+  <input type="text" name="nickName" placeholder="별명을 입력해주세요"><br>
+  성별 :
+  <select name="sex" placeholder="성별을 골라주세요">
+    <option value="">성별</option>
+    <option value="남자">남자</option>
+    <option value="여자">여자</option>
+  </select><br>
+  나이 :
+  <input type="number" name="age" placeholder="나이를 입력해주세요"><br>
+  <button type="submit" th:onClick="|location.href='@{/user/login}'|">가입하기</button>
+</form>
+</body>
+</html>
