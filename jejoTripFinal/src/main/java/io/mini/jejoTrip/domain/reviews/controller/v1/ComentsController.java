@@ -35,7 +35,10 @@ public class ComentsController {
 //    }
 
     @PostMapping("/post")
-    public String create(CommentsDTO commentsDTO){
+    public String create(
+
+        CommentsDTO commentsDTO
+    ){
         log.info(commentsDTO);
         comentService.create(commentsDTO);
         return "/review/list";

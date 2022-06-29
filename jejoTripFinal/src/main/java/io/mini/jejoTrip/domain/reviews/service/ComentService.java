@@ -27,7 +27,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Log4j2
 public class ComentService {
-    private  Reviews reviews;
     private  ComentRepository comentRepository;
 
     private  ReviewRepository reviewRepository;
@@ -62,8 +61,8 @@ public class ComentService {
 
     public void create(CommentsDTO commentsDTO){
 
-//        Reviews reviews = reviewRepository.findById(request.getReviewsId())
-//            .orElseThrow(() -> new RuntimeException("리뷰가 존재하지 않습니다."));
+        Reviews reviews = reviewRepository.findById(commentsDTO.getReviewsId())
+            .orElseThrow(() -> new RuntimeException("리뷰가 존재하지 않습니다."));
 //        Users users = userRepository.findById(request.getUsersId())
 //            .orElseThrow(() -> new RuntimeException("존재하지 않는 유저입니다."));
 

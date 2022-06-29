@@ -14,8 +14,8 @@ import lombok.Setter;
 @Builder
 public class CommentsDTO {
     private Long id;
+    private Long reviewsId;
     private String nickName;
-    private ReviewsDTO reviewsDTO;
     private String content;
 
 

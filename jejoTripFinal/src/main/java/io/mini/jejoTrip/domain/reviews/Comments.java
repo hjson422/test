@@ -45,7 +45,7 @@ public class Comments {
             return CommentsDTO.builder()
                 .id(this.id)
                 .content(this.content)
-                .reviewsDTO(this.reviews.convertToReviewsDTO())
+                .reviewsId(this.reviews.getId())
                 .nickName(nickName).build();
         }
 
