@@ -27,9 +27,9 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Log4j2
 public class ComentService {
-    private  ComentRepository comentRepository;
+    private final ComentRepository comentRepository;
 
-    private  ReviewRepository reviewRepository;
+    private final ReviewRepository reviewRepository;
     public void deleteComent(Long id) {
 
         comentRepository.deleteById(id);
