@@ -49,14 +49,16 @@ public class Comments {
                 .nickName(nickName).build();
         }
 
-        public static Comments of(String nickName, String content, Reviews reviews){
+        public static Comments of(String nickName, String content){
                 Comments comments = new Comments();
                 comments.nickName = nickName;
                 comments.content = content;
-                comments.reviews = reviews;
                 return comments;
         }
 
+        public void appendReviews(Reviews reviews){
+                this.reviews = reviews;
+        }
 
 
 //        public void update(String content){

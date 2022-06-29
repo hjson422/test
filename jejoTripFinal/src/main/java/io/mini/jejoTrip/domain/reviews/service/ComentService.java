@@ -68,8 +68,8 @@ public class ComentService {
 
 //        Comments comments = Comments.ofCreate(request.getContent());
         log.info(commentsDTO);
-        Comments comments = Comments.of(commentsDTO.getNickName(), commentsDTO.getContent(), reviews);
-
+        Comments comments = Comments.of(commentsDTO.getNickName(), commentsDTO.getContent());
+        comments.appendReviews(reviews);
         comentRepository.save(comments);
     }
 
